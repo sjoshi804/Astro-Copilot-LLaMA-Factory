@@ -732,7 +732,7 @@
       "user_tag": "user",
       "assistant_tag": "assistant"
     }
-  }
+  },
   "astro_sft_train_augmented": {
     "file_name": "demo_astro_data/astro_sft_augmented_train.json",
     "formatting": "sharegpt",
