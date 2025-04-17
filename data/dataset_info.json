@@ -706,63 +706,7 @@
     "folder": "python"
   },
   "qwen_coder_demo": {
-    "file_name": "astro_data/qwen_coder_demo.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "system": "system"
-    },
-    "tags": {
-      "role_tag": "from",
-      "content_tag": "value",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "astro_sft_augmented": {
-    "file_name": "astro_data/astro_sft_augmented_train.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "system": "system"
-    },
-    "tags": {
-      "role_tag": "from",
-      "content_tag": "value",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "astro_benchmark": {
-    "file_name": "astro_data/astro_benchmark.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "system": "system"
-    },
-    "tags": {
-      "role_tag": "from",
-      "content_tag": "value",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "astro_sft_valid": {
-    "file_name": "astro_data/astro_sft_valid.json",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "system": "system"
-    },
-    "tags": {
-      "role_tag": "from",
-      "content_tag": "value",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "astro_sft_test": {
-    "file_name": "astro_data/astro_sft_test.json",
+    "file_name": "demo_astro_data/qwen_coder_demo.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -776,7 +720,49 @@
     }
   },
   "astro_sft_train": {
-    "file_name": "astro_data/astro_sft_train.json",
+    "file_name": "demo_astro_data/astro_sft_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }
+  "astro_sft_train_augmented": {
+    "file_name": "demo_astro_data/astro_sft_augmented_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "astro_sft_valid": {
+    "file_name": "demo_astro_data/astro_sft_valid.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "astro_sft_test": {
+    "file_name": "demo_astro_data/astro_sft_test.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",

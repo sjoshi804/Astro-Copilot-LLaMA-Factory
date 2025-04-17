@@ -1,0 +1,288 @@
+[
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a Python function to check if a number is prime."
+      },
+      {
+        "from": "assistant",
+        "value": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain the difference between Python lists and tuples."
+      },
+      {
+        "from": "assistant",
+        "value": "Lists are mutable, meaning their contents can be changed, whereas tuples are immutable and cannot be modified after creation. Lists use square brackets [], while tuples use parentheses ()."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a SQL query to find the second highest salary from an Employee table."
+      },
+      {
+        "from": "assistant",
+        "value": "SELECT MAX(salary) AS SecondHighestSalary\nFROM Employee\nWHERE salary < (SELECT MAX(salary) FROM Employee);"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Implement a binary search algorithm in JavaScript."
+      },
+      {
+        "from": "assistant",
+        "value": "function binarySearch(arr, target) {\n    let left = 0;\n    let right = arr.length - 1;\n\n    while (left <= right) {\n        const mid = Math.floor((left + right) / 2);\n        if (arr[mid] === target) return mid;\n        if (arr[mid] < target) left = mid + 1;\n        else right = mid - 1;\n    }\n    return -1;\n}"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain the concept of Big O notation in algorithm complexity."
+      },
+      {
+        "from": "assistant",
+        "value": "Big O notation describes the worst-case time complexity of an algorithm. It expresses how the runtime grows relative to input size. O(1) is constant time, O(n) is linear, O(n²) is quadratic, and O(log n) is logarithmic. It helps predict algorithm performance and scalability."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Create a Python class to represent a basic stack data structure."
+      },
+      {
+        "from": "assistant",
+        "value": "class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop() if not self.is_empty() else None\n\n    def is_empty(self):\n        return len(self.items) == 0\n\n    def peek(self):\n        return self.items[-1] if not self.is_empty() else None"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a function to reverse a linked list in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "def reverse_linked_list(head):\n    prev = None\n    current = head\n    while current:\n        next_node = current.next\n        current.next = prev\n        prev = current\n        current = next_node\n    return prev"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain the difference between synchronous and asynchronous programming."
+      },
+      {
+        "from": "assistant",
+        "value": "Synchronous programming executes code sequentially, blocking execution until each operation completes. Asynchronous programming allows multiple operations to run concurrently without blocking, using callbacks, promises, or async/await to handle non-blocking I/O and improve performance."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Create a React component for a simple counter with useState."
+      },
+      {
+        "from": "assistant",
+        "value": "import React, { useState } from 'react';\n\nfunction Counter() {\n    const [count, setCount] = useState(0);\n\n    return (\n        <div>\n            <p>Count: {count}</p>\n            <button onClick={() => setCount(count + 1)}>Increment</button>\n            <button onClick={() => setCount(count - 1)}>Decrement</button>\n        </div>\n    );\n}"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a Python generator function for Fibonacci sequence."
+      },
+      {
+        "from": "assistant",
+        "value": "def fibonacci_generator(n):\n    a, b = 0, 1\n    count = 0\n    while count < n:\n        yield a\n        a, b = b, a + b\n        count += 1"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain how garbage collection works in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "Python uses reference counting and generational garbage collection. Each object has a reference count. When the count drops to zero, the object is deallocated. For cyclic references, Python uses a generational collector that periodically checks and frees unreachable objects across different memory generations."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Create a decorator to measure function execution time in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "import time\n\ndef timer_decorator(func):\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        print(f\"{func.__name__} ran in {end_time - start_time} seconds\")\n        return result\n    return wrapper"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a function to merge two sorted arrays in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "def merge_sorted_arrays(arr1, arr2):\n    merged = []\n    i, j = 0, 0\n    while i < len(arr1) and j < len(arr2):\n        if arr1[i] <= arr2[j]:\n            merged.append(arr1[i])\n            i += 1\n        else:\n            merged.append(arr2[j])\n            j += 1\n    merged.extend(arr1[i:])\n    merged.extend(arr2[j:])\n    return merged"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain the concept of closures in JavaScript."
+      },
+      {
+        "from": "assistant",
+        "value": "A closure is a function that retains access to variables from its outer lexical scope even after the outer function has returned. It allows for data privacy and creates function factories where inner functions can access and manipulate variables from their parent scope."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Create a custom exception class in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "class CustomValidationError(Exception):\n    def __init__(self, message, error_code=None):\n        self.message = message\n        self.error_code = error_code\n        super().__init__(self.message)"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a function to find the longest palindromic substring."
+      },
+      {
+        "from": "assistant",
+        "value": "def longest_palindrome(s):\n    if not s: return \"\"\n    start, max_len = 0, 1\n    for i in range(len(s)):\n        # Odd length palindromes\n        left, right = i, i\n        while left >= 0 and right < len(s) and s[left] == s[right]:\n            if right - left + 1 > max_len:\n                start = left\n                max_len = right - left + 1\n            left -= 1\n            right += 1\n        # Even length palindromes\n        left, right = i, i+1\n        while left >= 0 and right < len(s) and s[left] == s[right]:\n            if right - left + 1 > max_len:\n                start = left\n                max_len = right - left + 1\n            left -= 1\n            right += 1\n    return s[start:start+max_len]"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain the concept of memoization in dynamic programming."
+      },
+      {
+        "from": "assistant",
+        "value": "Memoization is an optimization technique where results of expensive function calls are cached and returned when the same inputs occur again. It trades memory for speed by storing computed results to avoid redundant calculations, significantly reducing time complexity for recursive algorithms like factorial or Fibonacci calculations."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Create a basic Observer design pattern implementation in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "class Subject:\n    def __init__(self):\n        self._observers = []\n\n    def attach(self, observer):\n        self._observers.append(observer)\n\n    def detach(self, observer):\n        self._observers.remove(observer)\n\n    def notify(self, message):\n        for observer in self._observers:\n            observer.update(message)"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a function to implement breadth-first search on a graph."
+      },
+      {
+        "from": "assistant",
+        "value": "from collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n\n    while queue:\n        vertex = queue.popleft()\n        for neighbor in graph[vertex]:\n            if neighbor not in visited:\n                queue.append(neighbor)\n                visited.add(neighbor)\n    return visited"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Explain the difference between deep and shallow copy in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "A shallow copy creates a new object but references the same memory addresses for nested objects. A deep copy creates a completely independent copy of an object and all its nested objects, using the copy module. Shallow copies are faster but can lead to unintended mutations, while deep copies ensure complete isolation."
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Create a context manager for file handling in Python."
+      },
+      {
+        "from": "assistant",
+        "value": "class FileHandler:\n    def __init__(self, filename, mode):\n        self.filename = filename\n        self.mode = mode\n        self.file = None\n\n    def __enter__(self):\n        self.file = open(self.filename, self.mode)\n        return self.file\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if self.file:\n            self.file.close()"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  },
+  {
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Write a function to implement Quick Sort algorithm."
+      },
+      {
+        "from": "assistant",
+        "value": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)"
+      }
+    ],
+    "system": "You are an AI coding assistant."
+  }
+]
