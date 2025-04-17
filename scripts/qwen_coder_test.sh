@@ -1,0 +1,23 @@
+torchrun --nproc_per_node=1 src/train.py \
+    --deepspeed examples/deepspeed/ds_z3_config.json \
+    --stage sft \
+    --do_train \
+    --use_fast_tokenizer \
+    --flash_attn auto \
+    --model_name_or_path Qwen/Qwen2.5-Coder-3B \
+    --dataset qwen_coder_demo \
+    --template qwen \
+    --finetuning_type lora \
+    --output_dir /tmp/checkpoints/qwen_coder \
+    --overwrite_cache \
+    --overwrite_output_dir \
+    --weight_decay 0.1 \
+    --per_device_train_batch_size 3 \
+    --gradient_accumulation_steps 1 \
+    --learning_rate 5e-5 \
+    --lr_scheduler_type cosine \
+    --logging_steps 1 \
+    --cutoff_len 4096 \
+    --save_steps 1000 \
+    --plot_loss \
+    --num_train_epochs 3
