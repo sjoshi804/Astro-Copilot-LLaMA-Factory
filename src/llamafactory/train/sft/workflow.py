@@ -136,5 +136,4 @@ def run_sft(
         trainer.save_metrics("predict", predict_results.metrics)
         trainer.save_predictions(dataset_module["eval_dataset"], predict_results, generating_args.skip_special_tokens)
 
-    # Create model card
-    create_modelcard_and_push(trainer, model_args, data_args, training_args, finetuning_args)
+    create_modelcard_and_push(model_args, finetuning_args, training_args, trainer)
